@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 7</title>
+</head>
+
+<body>
+
+    <div id="id_resultado"></div>
+
+    <script>
+
+        let resultado = document.querySelector("#id_resultado")
+
+        let numero = 0
+        let contador = 1
+        
+        // enquanto        
+        while (numero <= 100) {
+            
+            if(numero != 0){
+                numero = numero + numero
+                resultado.innerHTML = `${resultado.innerHTML}, ${numero}`
+                
+            }else{
+                numero = numero + contador
+                resultado.innerHTML = `${resultado.innerHTML} ${numero}`
+            }            
+            
+        }
+
+    </script>
+</body>
+
+</html>

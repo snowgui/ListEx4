@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 4</title>
+</head>
+
+<body>
+
+    <button onclick="idade()">Executar</button>
+
+    <script>
+
+        const idade = () => {
+
+            let media = 0.0
+            let menorIdade = 0
+            let maiorIdade = 0
+            let auxIdade = 0
+
+            for (x = 1; x <= 5; x++) {
+
+                auxIdade = parseFloat(prompt(`Pessoa ${x} informe sua idade: `))
+                media = media + auxIdade
+                
+                menorIdade = menorIdade < auxIdade && menorIdade != 0 ? menorIdade : auxIdade
+                maiorIdade = maiorIdade > auxIdade ? maiorIdade : auxIdade
+
+            }
+
+            alert(`Media: ${media / 5}`)
+            alert(`Menor Idade: ${menorIdade}`)
+            alert(`Maior Idade: ${maiorIdade}`)
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 12</title>
+</head>
+<body>
+
+    <script>
+        
+        let pontuacao = 0
+
+        pontuacao += parseInt(prompt("Quanto é 2 + 2?")) == 4 ? 10 : 0
+        
+        pontuacao += parseInt(prompt("O Polly gosta de tomar banho? Digite [ 1 ] para sim [ 2 ] para não: ")) == 2 ? 10 : 0
+
+        pontuacao += parseInt(prompt("Quanto é 7 - 2")) == 5 ? 10 : 0
+
+        pontuacao += prompt("Qual é a capital do brasil?") == "Brasilia" ? 10 : 0
+
+        pontuacao += prompt("Qual é o maior sonho da família? ") == "casa" ? 10 : 0
+
+        alert(`A Pontuação do usuário é: ${pontuacao}`)
+
+
+    </script>
+    
+</body>
+</html>

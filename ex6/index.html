@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 6</title>
+</head>
+<body>
+
+    <button onclick="btnClickExecutar()">Executar</button>
+    
+    <div id="id_resultado">
+
+    </div>
+
+    <script>
+
+        const btnClickExecutar = () =>{
+            let numero = parseInt(prompt("Digite um número para contar até 100: "))            
+            contarAteCem(numero)
+
+        }
+
+        const contarAteCem = (num) =>{
+                        
+            let resultado = document.querySelector("#id_resultado")
+            resultado.innerHTML = ""
+            
+            if(num > 100){
+                alert("Número inválido!")
+                return
+
+            }
+
+            while(num <= 100){
+                
+                resultado.innerHTML = `${resultado.innerHTML} ${num} <br>`
+                num++
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

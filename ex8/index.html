@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 8</title>
+</head>
+<style>
+    table{
+        border: 1px solid black
+    }
+</style>
+<body>
+
+
+    <h1>Lista de Compras</h1>
+    <hr>
+    <label for="id_item" style="font-weight: bold;">Item da Lista</label><br>
+    <input type="text" id="id_item" placeholder="Digite o item da lista...">
+    <Button onclick="addLista()">Adicionar</Button>
+
+    <hr>
+    <div id="id_resultado">
+
+    </div>
+
+    <script>
+
+
+        let listaCompras = []
+
+        const addLista = () =>{
+            
+            let item  = document.querySelector("#id_item").value
+
+            listaCompras.push(item)
+
+            montarTabela(listaCompras)
+
+        }
+
+        const montarTabela = (listaCompras) => {
+            
+            if(listaCompras.length == 0) return 
+            
+
+            let tabela = document.createElement("table")
+
+            let linha = document.createElement("tr")
+
+            let titulo = document.createElement("th")
+
+            titulo.innerHTML = "Itens da Lista"
+
+            linha.appendChild(titulo)
+            tabela.appendChild(linha)
+                                                
+            
+            let coluna
+
+            for(x = 0; x < listaCompras.length; x++){
+                
+                linha = null
+                coluna = null
+
+                coluna = document.createElement("td")
+                linha = document.createElement("tr")
+
+                coluna.innerHTML = listaCompras[x]
+
+                linha.appendChild(coluna)
+                tabela.appendChild(linha)
+
+            }
+
+        document.getElementById("id_resultado").innerHTML = ""
+        document.getElementById("id_resultado").appendChild(tabela)
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

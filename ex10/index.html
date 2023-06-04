@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 10</title>
+</head>
+<body>
+
+    <h1>Minha lista</h1>
+    <hr>
+    <label for="id_item_lista" style="font-weight: bold;">Item da lista</label><br>
+    
+    <input type="text" id="id_item_lista"> <button onclick="btnAdicionarClick()">Adicionar</button>
+
+    <hr>
+    <ul id="id_lista">
+
+
+    </ul>
+    
+</body>
+
+<script>
+
+    let minhaLista = []
+
+    const btnAdicionarClick = () =>{
+        let item = document.getElementById("id_item_lista").value
+
+        minhaLista.push(item)
+
+        
+        popularLista()
+
+    }
+
+    const popularLista = () => {
+
+        let list = document.getElementById("id_lista")    
+        list.innerHTML = ""
+        
+        let linha
+
+        for(x = 0; x < minhaLista.length; x++){
+            
+            linha = null
+
+            linha = document.createElement("li")
+        
+            linha.innerHTML = `${minhaLista[x]} <button style='color:red; fonbt-weight:bold' onclick='removerItem("${minhaLista[x]}")'>X</button> `
+            
+            list.appendChild(linha)
+        }
+
+
+    }
+
+    const removerItem = (item) =>{
+        
+        minhaLista.splice(minhaLista.indexOf(item, 1))
+        popularLista(minhaLista)
+    }
+
+
+</script>
+</html>

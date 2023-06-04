@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 10</title>
+</head>
+<body>
+
+    <script>
+
+        let listaVogais = ['a', 'e', 'i', 'o', 'u']
+
+        let palavra = prompt("Digite uma palavra: ")
+
+        let soma = 0
+
+        for(x = 0; x < palavra.length; x++){
+            
+         if(listaVogais.indexOf(palavra[x]) > 0){
+            soma++
+         }
+            
+        }        
+
+        alert(`A palavra tem: ${soma} vogais!`)
+
+        
+    </script>
+    
+</body>
+</html>

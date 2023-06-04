@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 2</title>
+</head>
+
+<body>
+
+
+    <label for="">Valor do primeiro número</label><br>
+    <input type="text" id="id_primeiro_numero">
+
+    <hr>
+    <label for="">Valor do segundo número</label><br>
+    <input type="text" id="id_segundo_numero">
+
+    <br>
+    <br>
+
+    <button onclick="btnCalcularClick()">Calcular</button>
+
+
+    <script>
+        const btnCalcularClick = () => {
+
+            let resultado = divisao(document.getElementById("id_primeiro_numero").value, document.getElementById(
+                "id_segundo_numero").value)
+
+            alert(`O resultado é ${resultado}`)
+        }
+
+
+        const divisao = (a, b) => a / b
+
+    </script>
+
+</body>
+
+</html>
